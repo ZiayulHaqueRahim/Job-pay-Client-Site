@@ -1,14 +1,10 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ApplicationStats from './ApplicationStats';
 import ApplicationList from './ApplicationList';
 import useAuth from '../../hooks/useAuth';
+import { myApplicationsPromise } from '../../api/myApplicationsApi';
 
-
-const myApplicationsPromise = email => {
-    return fetch(`http://localhost:3000/applications/?email=${email}`)
-            .then(res => res.json())
-}
-
+//----------------------api of myApplications---------------------//
 
 const MyApplications = () => {
 

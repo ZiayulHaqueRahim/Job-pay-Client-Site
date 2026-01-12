@@ -9,15 +9,15 @@ const Navbar = () => {
 
     const links =
         <>
-            <li><NavLink to="/" /> Home </li>
+            <li><NavLink to="/" > Home </NavLink></li>
             {
               user
               &&
               <>
-                <li><NavLink to="/myApplications" /> MyApplications  </li>
+                <li><NavLink to="/myApplications" > MyApplications </NavLink> </li>
               </>
             }
-            <li><NavLink to="/about" /> About Us </li>
+            <li><NavLink to="/about" > About Us </NavLink></li>
         </>
 
     const handleSignOutUser = () => {
@@ -56,13 +56,13 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex="-1"
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            className="menu  menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >     {links}     </ul>
         </div>
-        <a className="btn btn-ghost text-xl">JobPay</a>
+        <NavLink className="btn btn-ghost text-xl">JobPay</NavLink>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu flex flex-row gap-2 menu-horizontal px-1">
             {links}
         </ul>
       </div>
