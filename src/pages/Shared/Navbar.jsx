@@ -10,6 +10,7 @@ const Navbar = () => {
     const links =
         <>
             <li><NavLink to="/" > Home </NavLink></li>
+              {/*for applicant links. check roles as well*/}
             {
               user
               &&
@@ -17,7 +18,17 @@ const Navbar = () => {
                 <li><NavLink to="/myApplications" > MyApplications </NavLink> </li>
               </>
             }
-            <li><NavLink to="/about" > About Us </NavLink></li>
+               {/*for recruiter links. check roles as well*/}
+             {
+              user
+              &&
+              <>
+                <li><NavLink to="/addJob" > Add Job </NavLink> </li>
+              </>
+            }
+
+
+            
         </>
 
     const handleSignOutUser = () => {

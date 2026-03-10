@@ -53,7 +53,7 @@ const JobApply = () => {
   return (
     <div className="flex flex-col items-center justify-center ">
       <h2 className="text-center text-amber-200 font-bold mx-auto p-8">
-        Apply for this Job: <Link  to={`/jobs/${jobId}`}  /> 
+        Apply for this Job: <Link  to={`/jobs/${jobId}`} >Details</Link> 
       </h2>
       <p>Please give data only in   <span className="text-amber-50 font-bold py-3 text-center">URL</span>   format. Not plain text</p>
       <form onSubmit={handleApplyFormSubmit} className="text-center  items-center">
